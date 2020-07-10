@@ -15,7 +15,7 @@ function Login() {
         password: registerPassword,
       },
       withCredentials: true,
-      url: "http://localhost:3000/register",
+      url: "http://localhost:3000/api/auth/register",
     }).then((res) => console.log(res));
   };
   const login = () => {
@@ -26,14 +26,14 @@ function Login() {
         password: loginPassword,
       },
       withCredentials: true,
-      url: "http://localhost:3000/login",
+      url: "http://localhost:3000/api/auth/login",
     }).then((res) => console.log(res));
   };
   const getUser = () => {
     Axios({
       method: "GET",
       withCredentials: true,
-      url: "http://localhost:3000/user",
+      url: "http://localhost:3000/api/auth/user",
     }).then((res) => {
       setData(res.data);
       console.log(res.data);
