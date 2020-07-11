@@ -7,6 +7,7 @@ import Login from "./pages/Login"
 import Nav from "./components/Nav";
 import { StoreProvider } from "./utils/GlobalState";
 import FavoritesList from "./pages/FavoritesList";
+import ProtectedRoute from "./components/ProtectedRoute"
 
 function App() {
   return (

@@ -44,23 +44,23 @@ const Detail = props => {
         <Row>
           <Col size="md-10 md-offset-1">
             <article>
-              <h1>Content:</h1>
-              <p>{state.currentPost.body}</p>
+              <h1>Description:</h1>
+              <p className= "pt-4 pb-3">{state.currentPost.body}</p>
             </article>
           </Col>
           {state.favorites.indexOf(state.currentPost) !== -1 ? (
             <button className="btn btn-danger" onClick={removeFavorite}>
-                Remove from Favorites!
+                Remove from Saved!
             </button>
           ) : (
-            <button className="btn" onClick={addFavorite}>
-                ❤️ Add to Favorites
+            <button className="btn btn-outline-dark" onClick={addFavorite}>
+                Add to Saved
             </button>
           )}
         </Row>
         <Row>
           <Col size="md-2">
-            <Link to="/">← Back to Posts</Link>
+            <Link to="/home">← Back to Home</Link>
           </Col>
         </Row>
       </Container>
