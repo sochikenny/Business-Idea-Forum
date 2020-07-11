@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import Axios from "axios";
 
 function Login() {
@@ -7,6 +8,7 @@ function Login() {
   const [loginUsername, setLoginUsername] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
   const [data, setData] = useState(null);
+  const history = useHistory();
   const register = () => {
     Axios({
       method: "POST",
@@ -27,7 +29,7 @@ function Login() {
       },
       withCredentials: true,
       url: "http://localhost:3000/api/auth/login",
-    }).then((res) => console.log(res));
+    }).then((res) => history.push("/home"));
   };
   const getUser = () => {
     Axios({
