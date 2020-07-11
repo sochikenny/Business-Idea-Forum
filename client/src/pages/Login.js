@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Axios from "axios";
+import Authentication from "../components/Authentication"
 
 function Login() {
   const [registerUsername, setRegisterUsername] = useState("");
@@ -29,7 +30,7 @@ function Login() {
       },
       withCredentials: true,
       url: "http://localhost:3000/api/auth/login",
-    }).then((res) => history.push("/home"));
+    }).then(() => history.push("/home"));
   };
   const getUser = () => {
     Axios({
