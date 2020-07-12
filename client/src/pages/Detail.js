@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import Jumbotron from "../components/Jumbotron";
+import Comments from "../components/Comments";
 import API from "../utils/API";
 import { useStoreContext } from "../utils/GlobalState";
 import { SET_CURRENT_POST, ADD_FAVORITE, REMOVE_FAVORITE } from "../utils/actions";
@@ -47,6 +48,7 @@ const Detail = props => {
               <h1>Description:</h1>
               <p className= "pt-4 pb-3">{state.currentPost.body}</p>
             </article>
+            <Comments />
           </Col>
           {state.favorites.indexOf(state.currentPost) !== -1 ? (
             <button className="btn btn-danger" onClick={removeFavorite}>
@@ -71,3 +73,4 @@ const Detail = props => {
 };
 
 export default Detail;
+
