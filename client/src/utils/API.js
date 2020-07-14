@@ -16,5 +16,18 @@ export default {
   // Saves a post to the database
   savePost: function(postData) {
     return axios.post("/api/posts", postData);
-  }
+  },
+  //ADDED COMMENTS----
+  // Gets all comments
+  getComments: function() {
+    return axios.get("/api/comments");
+  },
+  // Gets the comment with the given id
+  getComment: function(id) {
+    return axios.get("/api/comments/" + id);
+  },
+  // Saves a comment to the database
+  saveComment: function(postComment) {
+    return axios.post("/api/comments", postComment);
+  },
 };

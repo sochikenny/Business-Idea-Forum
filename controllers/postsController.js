@@ -28,5 +28,12 @@ module.exports = {
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+  },
+
+  addComment: function(req, res) {
+    db.Post.findOneAndUpdate({ _id: req.body.postId }, {comments: [req.body]})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
   }
+ 
 };
