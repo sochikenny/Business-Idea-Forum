@@ -48,7 +48,7 @@ const Detail = props => {
               <h1>Description:</h1>
               <p className= "pt-4 pb-3">{state.currentPost.body}</p>
             </article>
-            <Comments />
+            <Comments postId={state.currentPost._id}/>
           </Col>
           {state.favorites.indexOf(state.currentPost) !== -1 ? (
             <button className="btn btn-danger" onClick={removeFavorite}>

@@ -10,7 +10,7 @@ const bodyParser = require("body-parser");
 const routes = require("./routes");
 const path = require("path");
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3005;
 
 const User = require("./models/user");
 
@@ -25,7 +25,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: process.env.PORT || "http://localhost:3001", // <-- location of the react app were connecting to
+    origin: process.env.PORT || "http://localhost:3005", // <-- location of the react app were connecting to
     credentials: true,
   })
 );
