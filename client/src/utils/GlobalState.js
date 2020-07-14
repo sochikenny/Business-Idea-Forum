@@ -76,7 +76,8 @@ const reducer = (state, action) => {
   case ISAUTHENTICATED:
     return {
       ...state,
-      isAuthenticated: true
+      isAuthenticated: true,
+      user: action.user
     };
 
   default:
@@ -95,7 +96,8 @@ const StoreProvider = ({ value = [], ...props }) => {
     },
     favorites: [],
     loading: false,
-    isAuthenticated: false
+    isAuthenticated: false,
+    user: {}
   });
 
   return <Provider value={[state, dispatch]} {...props} />;

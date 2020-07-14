@@ -34,10 +34,13 @@ function Login() {
       },
       withCredentials: true,
       url: "http://localhost:3000/api/auth/login",
-    }).then(() => 
+    }).then(({data}) => 
     {
-      dispatch({ type: ISAUTHENTICATED, })
-      history.push("/home")});
+      if (data._id){
+      dispatch({ type: ISAUTHENTICATED, user: data })
+      history.push("/home")}
+
+    });
   };
   const getUser = () => {
     Axios({
