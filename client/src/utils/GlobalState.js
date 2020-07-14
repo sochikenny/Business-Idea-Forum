@@ -7,7 +7,8 @@ import {
   ADD_FAVORITE,
   UPDATE_FAVORITES,
   REMOVE_FAVORITE,
-  LOADING
+  LOADING,
+  ISAUTHENTICATED
 } from "./actions";
 
 const StoreContext = createContext();
@@ -72,6 +73,12 @@ const reducer = (state, action) => {
       loading: true
     };
 
+  case ISAUTHENTICATED:
+    return {
+      ...state,
+      isAuthenticated: true
+    };
+
   default:
     return state;
   }
@@ -87,7 +94,8 @@ const StoreProvider = ({ value = [], ...props }) => {
       author: ""
     },
     favorites: [],
-    loading: false
+    loading: false,
+    isAuthenticated: false
   });
 
   return <Provider value={[state, dispatch]} {...props} />;
