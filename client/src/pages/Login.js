@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Axios from "axios";
 import Authentication from "../components/Authentication"
+import { ISAUTHENTICATED } from "../utils/actions";
+import { useStoreContext } from "../utils/GlobalState";
+
 
 function Login() {
   const [registerUsername, setRegisterUsername] = useState("");
@@ -10,6 +13,7 @@ function Login() {
   const [loginPassword, setLoginPassword] = useState("");
   const [data, setData] = useState(null);
   const history = useHistory();
+  const [state, dispatch] = useStoreContext();
   const register = () => {
     Axios({
       method: "POST",
@@ -30,7 +34,13 @@ function Login() {
       },
       withCredentials: true,
       url: "http://localhost:3000/api/auth/login",
-    }).then(() => history.push("/home"));
+    }).then(({data}) => 
+    {
+      if (data._id){
+      dispatch({ type: ISAUTHENTICATED, user: data })
+      history.push("/home")}
+
+    });
   };
   const getUser = () => {
     Axios({
