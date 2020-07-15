@@ -3,6 +3,7 @@ import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_POST, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
 
+
 function CreatePostForm() {
   const titleRef = useRef();
   const bodyRef = useRef();
@@ -47,6 +48,7 @@ function CreatePostForm() {
           Save Post
         </button>
       </form>
+    
     </div>
   );
 }
