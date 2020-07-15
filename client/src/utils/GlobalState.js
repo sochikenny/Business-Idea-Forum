@@ -7,10 +7,10 @@ import {
   ADD_FAVORITE,
   UPDATE_FAVORITES,
   REMOVE_FAVORITE,
-  ISAUTHENTICATED,
+  LOADING,
   ADD_COMMENT, //ADDED COMMENT
   SET_CURRENT_COMMENT, //ADDED COMMENT
-  LOADING
+  ISAUTHENTICATED
 } from "./actions";
 
 const StoreContext = createContext();
@@ -77,18 +77,28 @@ const reducer = (state, action) => {
         loading: false,
       };
 
-    case ADD_COMMENT:
-      return {
-        ...state,
-        comments: [action.comment, ...state.comments],
-        loading: false,
-      };
-    //-------------------------------
-    case LOADING:
-      return {
-        ...state,
-        loading: true,
-      };
+
+  //ADDED COMMENTS HERE-------
+  case SET_CURRENT_COMMENT:
+    return {
+      ...state,
+      currentComment: action.comment,
+      loading: false,
+    };
+
+  case ADD_COMMENT:
+    return {
+      ...state,
+      comments: [action.comment, ...state.comments],
+      loading: false,
+    };
+  //-------------------------------
+
+  case LOADING:
+    return {
+      ...state,
+      loading: true
+    };
 
   case ISAUTHENTICATED:
     return {
@@ -129,3 +139,5 @@ const useStoreContext = () => {
 };
 
 export { StoreProvider, useStoreContext };
+
+
