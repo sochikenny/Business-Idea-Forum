@@ -1,0 +1,21 @@
+.Login{
+    background-image: url(https://images.pexels.com/photos/219692/pexels-photo-219692.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    text-align: center;
+    padding-top: 5rem;
+    height: 90.5vh;
+}
+
+.LoginText{
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: .5rem;
+}
+
+
+.InputField{
+    background-color: lightcyan;
+}
+
+.InputField:focus{
+    background-color: lightblue;
+}
