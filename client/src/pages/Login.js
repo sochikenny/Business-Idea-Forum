@@ -4,7 +4,7 @@ import Axios from "axios";
 import Authentication from "../components/Authentication"
 import { ISAUTHENTICATED } from "../utils/actions";
 import { useStoreContext } from "../utils/GlobalState";
-
+import "../CSS/login.css"
 
 function Login() {
   const [registerUsername, setRegisterUsername] = useState("");
@@ -55,26 +55,32 @@ function Login() {
   return (
     <div className="Login">
       <div>
-        <h1>Register</h1>
+        <h1 className="LoginText">Register</h1>
         <input
+          className="InputField"
           placeholder="username"
           onChange={(e) => setRegisterUsername(e.target.value)}
         />
         <input
+          className="InputField"
           placeholder="password"
+          type="password"
           onChange={(e) => setRegisterPassword(e.target.value)}
         />
         <button onClick={register}>Submit</button>
       </div>
 
       <div>
-        <h1>Login</h1>
+        <h1 className="LoginText">Login</h1>
         <input
+          className="InputField"
           placeholder="username"
           onChange={(e) => setLoginUsername(e.target.value)}
         />
         <input
+          className="InputField"
           placeholder="password"
+          type="password"
           onChange={(e) => setLoginPassword(e.target.value)}
         />
         <button onClick={login}>Submit</button>

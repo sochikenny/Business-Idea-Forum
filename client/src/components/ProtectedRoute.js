@@ -1,6 +1,5 @@
-import React from 'react'
-import { Route, Redirect } from 'react-router-dom'
-import Authentication from "./Authentication"
+import React from 'react';
+import { Route, Redirect } from 'react-router-dom';
 import { useStoreContext } from "../utils/GlobalState";
 
 
@@ -16,13 +15,13 @@ const ProtectedRoute = ({ component: Component, loggedIn, path, ...rest }) => {
             <Component {...props} />
           ) : (
             <Redirect
-              to={{
-                pathname: "/",
-                state: {
-                  from: props.location,
-                  error: "You need to login first!",
-                },
-              }}
+            to={{
+              pathname: "/",
+              state: {
+                from: props.location,
+                error: "You need to login first!",
+              },
+            }}
             />
           );
         }}
