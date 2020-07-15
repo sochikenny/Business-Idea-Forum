@@ -8,6 +8,8 @@ import {
   UPDATE_FAVORITES,
   REMOVE_FAVORITE,
   LOADING,
+  ADD_COMMENT, //ADDED COMMENT
+  SET_CURRENT_COMMENT, //ADDED COMMENT
   ISAUTHENTICATED
 } from "./actions";
 
@@ -67,6 +69,22 @@ const reducer = (state, action) => {
       })
     };
 
+  //ADDED COMMENTS HERE-------
+  case SET_CURRENT_COMMENT:
+    return {
+      ...state,
+      currentComment: action.comment,
+      loading: false,
+    };
+
+  case ADD_COMMENT:
+    return {
+      ...state,
+      comments: [action.comment, ...state.comments],
+      loading: false,
+    };
+  //-------------------------------
+
   case LOADING:
     return {
       ...state,
@@ -108,3 +126,5 @@ const useStoreContext = () => {
 };
 
 export { StoreProvider, useStoreContext };
+
+
