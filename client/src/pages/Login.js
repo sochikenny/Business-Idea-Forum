@@ -55,9 +55,10 @@ function Login() {
   return (
     <div className="Login">
       <div>
-        <h1 className="LoginText">Register</h1>
+        <h4 className="LoginTitle">Welcome!<br/>Please log in or register below</h4>
+        <h3 className="LoginText">Register</h3>
         <input
-          className="InputField"
+          className="InputField mb-3"
           placeholder="username"
           onChange={(e) => setRegisterUsername(e.target.value)}
         />
@@ -67,11 +68,11 @@ function Login() {
           type="password"
           onChange={(e) => setRegisterPassword(e.target.value)}
         />
-        <button onClick={register}>Submit</button>
+        <button className= "btn btn-info ml-3" onClick={register}>Submit</button>
       </div>
 
       <div>
-        <h1 className="LoginText">Login</h1>
+        <h3 className="LoginText">Login</h3>
         <input
           className="InputField"
           placeholder="username"
@@ -83,7 +84,7 @@ function Login() {
           type="password"
           onChange={(e) => setLoginPassword(e.target.value)}
         />
-        <button onClick={login}>Submit</button>
+        <button className= "btn btn-info ml-3" onClick={login}>Submit</button>
       </div>
 
       {/* <div>
