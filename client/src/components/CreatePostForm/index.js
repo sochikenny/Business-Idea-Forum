@@ -31,19 +31,11 @@ function CreatePostForm() {
   };
 
   return (
-    <div>
-      <div className="jumbotron">
-        <img
-          className="img-fluid img-thumbnail"
-          alt= "Business Meeting Table With Laptops"
-          src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-        />
-      </div> 
+    <div className="HomeFormDiv">
       <h1>Post your business idea</h1>
       <form className="form-group mt-5 mb-5" onSubmit={handleSubmit}>
         <input className="form-control mb-5" required ref={titleRef} placeholder="Title" />
         <textarea className="form-control mb-5" required ref={bodyRef} placeholder="Body" />
-        {/* <input className="form-control mb-5" ref={authorRef} placeholder="Screen name" /> */}
         <button className="btn btn-success mt-3 mb-5" disabled={state.loading} type="submit">
           Save Post
         </button>

@@ -17,9 +17,9 @@ function App() {
           <Nav />
           <Switch>
             <Route exact path="/" component={Login} />
-            <ProtectedRoute exact path="/home" component={Home} />
-            <ProtectedRoute exact path="/favorites" component={FavoritesList} />
-            <ProtectedRoute exact path="/posts/:id" component={Detail} />
+            <Route exact path="/home" component={Home} />
+            <Route exact path="/favorites" component={FavoritesList} />
+            <Route exact path="/posts/:id" component={Detail} />
             <Route component={NoMatch} />
           </Switch>
         </StoreProvider>
