@@ -10,7 +10,7 @@ import {
   LOADING,
   ADD_COMMENT, //ADDED COMMENT
   SET_CURRENT_COMMENT, //ADDED COMMENT
-  ISAUTHENTICATED
+  ISAUTHENTICATED,
 } from "./actions";
 
 const StoreContext = createContext();
@@ -68,7 +68,7 @@ const reducer = (state, action) => {
           return post._id !== action._id;
         }),
       };
-    
+
     //ADDED COMMENTS HERE-------
     case SET_CURRENT_COMMENT:
       return {
@@ -77,38 +77,30 @@ const reducer = (state, action) => {
         loading: false,
       };
 
+    case ADD_COMMENT:
+      const comments = action.comment;
+      return {
+        ...state,
+        currentPost: { ...state.currentPost, comments },
+        loading: false,
+      };
+    //-------------------------------
 
-  //ADDED COMMENTS HERE-------
-  case SET_CURRENT_COMMENT:
-    return {
-      ...state,
-      currentComment: action.comment,
-      loading: false,
-    };
+    case LOADING:
+      return {
+        ...state,
+        loading: true,
+      };
 
-  case ADD_COMMENT:
-    return {
-      ...state,
-      comments: [action.comment, ...state.comments],
-      loading: false,
-    };
-  //-------------------------------
+    case ISAUTHENTICATED:
+      return {
+        ...state,
+        isAuthenticated: true,
+        user: action.user,
+      };
 
-  case LOADING:
-    return {
-      ...state,
-      loading: true
-    };
-
-  case ISAUTHENTICATED:
-    return {
-      ...state,
-      isAuthenticated: true,
-      user: action.user
-    };
-
-  default:
-    return state;
+    default:
+      return state;
   }
 };
 
@@ -120,15 +112,15 @@ const StoreProvider = ({ value = [], ...props }) => {
       title: "",
       body: "",
       author: "",
+      currentComment: {
+        body: "",
+      },
     },
+    comments: [],
     favorites: [],
     loading: false,
     isAuthenticated: false,
     user: {},
-    comments: [],
-    currentComment: {
-      body: "",
-    }
   });
 
   return <Provider value={[state, dispatch]} {...props} />;
@@ -139,5 +131,3 @@ const useStoreContext = () => {
 };
 
 export { StoreProvider, useStoreContext };
-
-

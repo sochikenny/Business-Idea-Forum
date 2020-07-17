@@ -5,7 +5,7 @@ import API from "../../utils/API";
 
 function Comments({postId}) {
   const bodyRef = useRef();
-  const authorRef = useRef();
+  // const authorRef = useRef();
   const [state, dispatch] = useStoreContext();
 
   const handleSubmit = (e) => {
@@ -14,7 +14,7 @@ function Comments({postId}) {
     API.saveComment({
       postId,
       body: bodyRef.current.value,
-      author: bodyRef.current.value,
+      // author: bodyRef.current.value,
     })
       .then((result) => {
         dispatch({
@@ -25,7 +25,7 @@ function Comments({postId}) {
       .catch((err) => console.log(err));
 
     bodyRef.current.value = "";
-    authorRef.current.value = "";
+    // authorRef.current.value = "";
   };
 
   return (
@@ -42,11 +42,11 @@ function Comments({postId}) {
             ref={bodyRef}
             placeholder="Body"
           />
-          <input
+          {/* <input
             className="form-control mb-5"
             ref={authorRef}
             placeholder="Screen name"
-          />
+          /> */}
           <button
             className="btn btn-success mt-3 mb-5"
             disabled={state.loading}

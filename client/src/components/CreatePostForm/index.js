@@ -7,7 +7,7 @@ import API from "../../utils/API";
 function CreatePostForm() {
   const titleRef = useRef();
   const bodyRef = useRef();
-  const authorRef = useRef();
+  // const authorRef = useRef();
   const [state, dispatch] = useStoreContext();
 
   const handleSubmit = e => {
