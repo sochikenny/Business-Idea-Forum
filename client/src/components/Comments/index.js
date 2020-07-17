@@ -31,12 +31,12 @@ function Comments({postId}) {
   return (
     <div>
       <section>
-        <h2>Leave a Comment:</h2>
         <form
           className="form-group mt-5 mb-5"
           id="comment"
           onSubmit={handleSubmit}
         >
+          <h3>Leave a Comment:</h3>
           <textarea
             className="form-control mb-5"
             ref={bodyRef}
@@ -54,7 +54,7 @@ function Comments({postId}) {
           >
             Submit
           </button>
-        </form>
+          </form>
       </section>
     </div>
   );
