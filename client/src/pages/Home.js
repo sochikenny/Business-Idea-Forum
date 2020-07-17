@@ -6,7 +6,9 @@ import PostsList from "../components/PostsList";
 const Home = () => {
   return (
     <Container fluid>
-      <Row>
+      <div className="jumbotron jumbotron-fluid HomePageHero">
+      </div> 
+      <Row tag="Gradient">
         <Col size="md-6 sm-12">
           <PostsList />
         </Col>

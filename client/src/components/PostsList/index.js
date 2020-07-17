@@ -37,7 +37,7 @@ function PostsList() {
   }, []);
 
   return (
-    <div>
+    <div className="HomeFormDiv">
       <h1>All Business Ideas</h1>
       <h3 className="mb-5 mt-5">Click on a post to view</h3>
       {state.posts.length ? (

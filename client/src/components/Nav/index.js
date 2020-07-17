@@ -5,7 +5,7 @@ function Nav() {
   const [store] = useStoreContext();
 
   return (
-    <nav className="navbar navbar-dark bg-primary">
+    <nav className="navbar navbar-dark bg-primary" id="Navigation">
       <a className="navbar-brand mx-auto align-middle NavbarTitle">Business Ideas Forum</a>
       <a class="btn btn-success" href="/" role="button">
         Logout
