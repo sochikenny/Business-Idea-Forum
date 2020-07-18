@@ -36,7 +36,7 @@ function CreatePostForm() {
       <form className="form-group mt-5 mb-5" onSubmit={handleSubmit}>
         <input className="form-control mb-5" required ref={titleRef} placeholder="Title" />
         <textarea className="form-control mb-4" required ref={bodyRef} placeholder="Body" rows="5"/>
-        <button className="btn btn-success mt-4 mb-2" disabled={state.loading} type="submit">
+        <button className="btn btn-success btn-lg mt-4 mb-1" disabled={state.loading} type="submit">
           Save Post
         </button>
       </form>

@@ -48,7 +48,7 @@ function Comments({postId}) {
             placeholder="Screen name"
           /> */}
           <button
-            className="btn btn-success mt-3 mb-5"
+            className="btn btn-success btn-lg mt-3 mb-5"
             disabled={state.loading}
             type="submit"
           >
