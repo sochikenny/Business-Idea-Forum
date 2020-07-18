@@ -5,6 +5,52 @@
 #Gradient{
     background-image: linear-gradient( #1e2a36, whitesmoke);
 }
+
+#DetailHero {
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 0em;
+    height: 45vh;
+    background-image: url(https://images.pexels.com/photos/1616443/pexels-photo-1616443.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: 100vw;
+    background-position: center;
+    background-position-x: -35rem;
+}
+
+#DetailTitle {
+    color: floralwhite;
+    text-align: center;
+    padding-top: 3rem;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+#Description{
+    margin-top: 1.5rem;
+    color: floralwhite;
+}
+
+#DetailBody{
+    background-image: linear-gradient( #1e2a36, whitesmoke);
+
+}
+
+#CommentTitle{
+    color: whitesmoke;
+}
+
+#LeaveComment{
+    color: white;
+}
+
+#FooterDiv{
+    padding-bottom: 2rem;
+}
+
+#Footer{
+    background-color: whitesmoke;
+}
+
 .NavbarTitle{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding-left: 4.5rem;
@@ -64,4 +110,8 @@
     margin-top: 3rem;
     margin-bottom: 3rem;
     background-color: aliceblue;
+}
+
+.HeadingText{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

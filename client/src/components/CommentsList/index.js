@@ -25,7 +25,7 @@ function CommentsList({ postId, comments }) {
   //  console.log(state)
   return (
     <div>
-      <h2>Comments:</h2>
+      <h2 className="HeadingText" id="CommentTitle">Comments:</h2>
       <section>
         {state.currentPost.comments &&
           state.currentPost.comments.map((comment) => (
@@ -33,14 +33,14 @@ function CommentsList({ postId, comments }) {
               className="list"
               style={{
                 listStyleType: "none",
-                border: "1px solid #dedede",
+                border: "1px solid black",
                 padding: "10px",
                 margin: "20px 0",
                 position: "relative",
                 justifyContent: "space-between",
                 borderRadius: "20px",
                 lineHeight: "1.8rem",
-                backgroundColor: "#D3D3D3",
+                backgroundColor: "#bde0ff",
               }}
             >
               {comment.body}
