@@ -73,7 +73,7 @@ const Detail = (props) => {
                 Remove from Saved!
               </button>
             ) : (
-              <button className="btn btn-info" onClick={addFavorite}>
+              <button className="btn btn-info btn-lg" onClick={addFavorite}>
                 Add to Saved
               </button>
             )}
@@ -86,7 +86,7 @@ const Detail = (props) => {
           </Row>
           <Row tag="Footer">
             <Col size="md-2" tag="FooterDiv">
-              <Link className="pb-3" to="/home">← Back to Home</Link>
+              <Link className="pb-3 LinkText" to="/home">← Back to Home</Link>
             </Col>
           </Row>
         </Container>
