@@ -38,7 +38,7 @@ function Comments({postId}) {
         >
           <h3>Leave a Comment:</h3>
           <textarea
-            className="form-control mb-5"
+            className="form-control"
             ref={bodyRef}
             placeholder="Body"
           />

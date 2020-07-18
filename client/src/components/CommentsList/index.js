@@ -40,6 +40,7 @@ function CommentsList({ postId, comments }) {
                 justifyContent: "space-between",
                 borderRadius: "20px",
                 lineHeight: "1.8rem",
+                backgroundColor: "#D3D3D3",
               }}
             >
               {comment.body}
