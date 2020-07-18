@@ -32,11 +32,11 @@ function CreatePostForm() {
 
   return (
     <div className="HomeFormDiv">
-      <h1>Post your business idea</h1>
+      <h1 className="HeadingText">Post your business idea</h1>
       <form className="form-group mt-5 mb-5" onSubmit={handleSubmit}>
         <input className="form-control mb-5" required ref={titleRef} placeholder="Title" />
-        <textarea className="form-control mb-5" required ref={bodyRef} placeholder="Body" />
-        <button className="btn btn-success mt-3 mb-5" disabled={state.loading} type="submit">
+        <textarea className="form-control mb-4" required ref={bodyRef} placeholder="Body" rows="5"/>
+        <button className="btn btn-success mt-4 mb-2" disabled={state.loading} type="submit">
           Save Post
         </button>
       </form>

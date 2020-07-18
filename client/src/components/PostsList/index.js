@@ -39,8 +39,8 @@ function PostsList() {
 
   return (
     <div className="HomeFormDiv">
-      <h1>All Business Ideas</h1>
-      <h3 className="mb-5 mt-5">Click on a post to view</h3>
+      <h1 className="HeadingText">All Business Ideas</h1>
+      <h3 className="mb-5 mt-5 HeadingText">Click on a post to view</h3>
       {state.posts.length ? (
         <List>
           {state.posts.map(post => (
@@ -50,15 +50,15 @@ function PostsList() {
                   {post.title} by {post.author}
                 </strong>
               </Link>
-              <DeleteBtn onClick={() => removePost(post._id)} />
+              {/* <DeleteBtn onClick={() => removePost(post._id)} /> */}
             </ListItem>
           ))}
         </List>
       ) : (
-        <h3>You haven't added any posts yet!</h3>
+        <h3 className="HeadingText">You haven't added any posts yet!</h3>
       )}
       <div className="mt-5">
-        <Link to="favorites">View Saved Posts</Link>
+        <Link className="HeadingText" to="favorites">View Saved Posts</Link>
       </div>
     </div>
   );

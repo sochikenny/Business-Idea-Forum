@@ -36,7 +36,7 @@ function Comments({postId}) {
           id="comment"
           onSubmit={handleSubmit}
         >
-          <h3>Leave a Comment:</h3>
+          <h3 className="HeadingText" id="LeaveComment">Leave a Comment:</h3>
           <textarea
             className="form-control"
             ref={bodyRef}

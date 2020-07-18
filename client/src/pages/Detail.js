@@ -41,18 +41,19 @@ const Detail = (props) => {
         <Container fluid>
           <Row>
             <Col size="md-12">
-              <Jumbotron>
-                <h1>
+              <Jumbotron id="DetailHero">
+                <h1 className="HeadingText"
+                    id="DetailTitle">
                   {state.currentPost.title} by {state.currentPost.author}
                 </h1>
               </Jumbotron>
             </Col>
           </Row>
-          <Row>
+          <Row tag="DetailBody">
             <Col size="md-10 md-offset-1">
               <article>
-                <h1>Description:</h1>
-                <p
+                <h1 className="HeadingText" id="Description">Description:</h1>
+                <p className="HeadingText"
                   style={{
                     listStyleType: "none",
                     border: "1px solid #2F4F4F",
@@ -62,29 +63,30 @@ const Detail = (props) => {
                     justifyContent: "space-between",
                     borderRadius: "5px",
                     lineHeight: "1.8rem",
+                    backgroundColor: "aliceblue"
                   }}
                 >
                   {state.currentPost.body}
                 </p>
+            {state.favorites.indexOf(state.currentPost) !== -1 ? (
+              <button className="btn btn-danger" onClick={removeFavorite}>
+                Remove from Saved!
+              </button>
+            ) : (
+              <button className="btn btn-info" onClick={addFavorite}>
+                Add to Saved
+              </button>
+            )}
               </article>
               <hr />
               <CommentsList postId={state.currentPost._id} />
               <br />
               <Comments postId={state.currentPost._id} />
             </Col>
-            {state.favorites.indexOf(state.currentPost) !== -1 ? (
-              <button className="btn btn-danger" onClick={removeFavorite}>
-                Remove from Saved!
-              </button>
-            ) : (
-              <button className="btn btn-outline-dark" onClick={addFavorite}>
-                Add to Saved
-              </button>
-            )}
           </Row>
-          <Row>
-            <Col size="md-2">
-              <Link to="/home">← Back to Home</Link>
+          <Row tag="Footer">
+            <Col size="md-2" tag="FooterDiv">
+              <Link className="pb-3" to="/home">← Back to Home</Link>
             </Col>
           </Row>
         </Container>
