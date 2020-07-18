@@ -8,7 +8,7 @@ const postSchema = new Schema({
   date: { type: Date, default: Date.now },
   comments: [
     {
-      // author: String,
+      author: { type: String, required: true},
       body: String,
       date: { type: Date, default: Date.now },
     },
