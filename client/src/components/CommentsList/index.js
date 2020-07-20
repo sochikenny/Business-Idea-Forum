@@ -43,6 +43,7 @@ function CommentsList({ postId, comments }) {
                 backgroundColor: "#bde0ff",
               }}
             >
+              <span style={{color: "#228B22", fontWeight: "bolder"}}>{comment.author}:    </span>
               {comment.body}
             </li>
           ))}

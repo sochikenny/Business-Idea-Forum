@@ -37,6 +37,8 @@ function Login() {
     }).then(({data}) => 
     {
       if (data._id){
+        // console.log(data)
+        localStorage.setItem("usernameData", data.username)
       dispatch({ type: ISAUTHENTICATED, user: data })
       history.push("/home")}
 

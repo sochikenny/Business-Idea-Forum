@@ -14,7 +14,7 @@ function Comments({postId}) {
     API.saveComment({
       postId,
       body: bodyRef.current.value,
-      // author: bodyRef.current.value,
+      author: localStorage.getItem("usernameData")
     })
       .then((result) => {
         dispatch({
@@ -36,19 +36,19 @@ function Comments({postId}) {
           id="comment"
           onSubmit={handleSubmit}
         >
-          <h3 className="HeadingText" id="LeaveComment">Leave a Comment:</h3>
+          <h3>Leave a Comment:</h3>
           <textarea
-            className="form-control"
+            className="form-control mb-2"
             ref={bodyRef}
             placeholder="Body"
           />
           {/* <input
-            className="form-control mb-5"
+            className="form-control"
             ref={authorRef}
             placeholder="Screen name"
           /> */}
           <button
-            className="btn btn-success btn-lg mt-3 mb-5"
+            className="btn btn-success mt-2 mb-5"
             disabled={state.loading}
             type="submit"
           >
