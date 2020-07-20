@@ -16,7 +16,7 @@ function CreatePostForm() {
     API.savePost({
       title: titleRef.current.value,
       body: bodyRef.current.value,
-      // author: authorRef.current.value
+      author: localStorage.getItem("usernameData")
     })
       .then(result => {
         dispatch({
