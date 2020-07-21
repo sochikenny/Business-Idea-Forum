@@ -14,6 +14,9 @@ function Login() {
   const [data, setData] = useState(null);
   const history = useHistory();
   const [state, dispatch] = useStoreContext();
+  var userMessage = document.querySelector(".usermessage");
+
+
   const register = () => {
     Axios({
       method: "POST",
@@ -22,9 +25,11 @@ function Login() {
         password: registerPassword,
       },
       withCredentials: true,
+
       url: "https://project3-business-idea-forum.herokuapp.com/api/auth/register",
     }).then((res) => console.log(res));
   };
+
   const login = () => {
     Axios({
       method: "POST",
