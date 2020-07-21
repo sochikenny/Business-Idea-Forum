@@ -27,7 +27,7 @@ function Login() {
       withCredentials: true,
 
       url: "https://project3-business-idea-forum.herokuapp.com/api/auth/register",
-    }).then((res) => console.log(res));
+    }).then((res) => alert("Thank you for registering! Please log in!"));
   };
 
   const login = () => {
