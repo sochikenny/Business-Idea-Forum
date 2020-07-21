@@ -6,7 +6,9 @@ function Nav() {
 
   return (
     <nav className="navbar navbar-dark bg-primary" id="Navigation">
-      <a className="navbar-brand mx-auto align-middle NavbarTitle">Business Ideas Forum</a>
+      <a className="navbar-brand mx-auto align-middle NavbarTitle">
+      <img src="https://image.flaticon.com/icons/svg/3050/3050484.svg" width="50" height="50" class=" pr-2 d-inline-block align-top" alt="" loading="lazy"/>
+        Business Ideas Forum</a>
       <a class="btn btn-success" href="/" onClick={()=>{localStorage.removeItem("usernameData")}} role="button">
         Logout
       </a>

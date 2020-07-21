@@ -4,7 +4,7 @@ function Jumbotron({ children, id }) {
   return (
     <div
       style={{  clear: "both", paddingTop: 100, textAlign: "center" }}
-      className="jumbotron jumbotron-fluid  border-dark"
+      className="jumbotron jumbotron-fluid  border-dark kenburns-top"
       id={id}
     >
       {children}

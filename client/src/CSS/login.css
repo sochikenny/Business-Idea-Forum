@@ -1,3 +1,27 @@
+body{
+    background-image: linear-gradient( #1e2a36, whitesmoke);
+    height: 100vh;
+}
+
+li {
+    animation-duration: .75s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%; 
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+  
+
 #Navigation{
     background-image: linear-gradient(90deg, #1e2a36, #406383, #1e2a36);
 }
@@ -58,6 +82,27 @@
     background-color: whitesmoke;
 }
 
+#FavoritesHeader{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+}
+
+#FavoritePostBackground{
+    background-color: aliceblue;
+    padding-bottom: 2rem;
+    margin-bottom: 0;
+    padding-top: 2rem;
+}
+
+#NoSavedPosts{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+}
+
+.kenburns-top {
+	-webkit-animation: kenburns-top .75s ease-out reverse both;
+	        animation: kenburns-top .75s ease-out reverse both;
+}
 .NavbarTitle{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding-left: 4.5rem;
@@ -140,3 +185,33 @@
 .LinkText {
     font-size: large;
 }
+
+@-webkit-keyframes kenburns-top {
+    0% {
+      -webkit-transform: scale(1) translateY(0);
+              transform: scale(1) translateY(0);
+      -webkit-transform-origin: 50% 16%;
+              transform-origin: 50% 16%;
+    }
+    100% {
+      -webkit-transform: scale(1.25) translateY(-15px);
+              transform: scale(1.25) translateY(-15px);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+    }
+  }
+  @keyframes kenburns-top {
+    0% {
+      -webkit-transform: scale(1) translateY(0);
+              transform: scale(1) translateY(0);
+      -webkit-transform-origin: 50% 16%;
+              transform-origin: 50% 16%;
+    }
+    100% {
+      -webkit-transform: scale(1.25) translateY(-15px);
+              transform: scale(1.25) translateY(-15px);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+    }
+  }
+  

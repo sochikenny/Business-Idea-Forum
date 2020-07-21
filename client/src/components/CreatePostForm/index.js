@@ -31,7 +31,7 @@ function CreatePostForm() {
   };
 
   return (
-    <div className="HomeFormDiv">
+    <div className="HomeFormDiv  animate__animated animate__fadeInUp">
       <h1 className="HeadingText">Post your business idea</h1>
       <form className="form-group mt-5 mb-5" onSubmit={handleSubmit}>
         <input className="form-control mb-5" required ref={titleRef} placeholder="Title" />
