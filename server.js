@@ -50,7 +50,7 @@ app.use(routes);
 
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/reactcms",
+  process.env.MONGODB_URI || "mongodb://justin:password1@ds153869.mlab.com:53869/heroku_hmzxsf6v",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
