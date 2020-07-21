@@ -25,9 +25,10 @@ function Login() {
         password: registerPassword,
       },
       withCredentials: true,
-      url: "http://localhost:3000/api/auth/register",
-    }).then((res) => alert("Thank you for signing up. Please log in"));
-  }
+
+      url: "https://project3-business-idea-forum.herokuapp.com/api/auth/register",
+    }).then((res) => console.log(res));
+  };
 
   const login = () => {
     Axios({
@@ -37,7 +38,7 @@ function Login() {
         password: loginPassword,
       },
       withCredentials: true,
-      url: "http://localhost:3000/api/auth/login",
+      url: "https://project3-business-idea-forum.herokuapp.com/api/auth/login",
     }).then(({data}) => 
     {
       if (data._id){
@@ -52,7 +53,7 @@ function Login() {
     Axios({
       method: "GET",
       withCredentials: true,
-      url: "http://localhost:3000/api/auth/user",
+      url: "https://project3-business-idea-forum.herokuapp.com/api/auth/user",
     }).then((res) => {
       setData(res.data);
       console.log(res.data);
