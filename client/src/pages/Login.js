@@ -14,6 +14,9 @@ function Login() {
   const [data, setData] = useState(null);
   const history = useHistory();
   const [state, dispatch] = useStoreContext();
+  var userMessage = document.querySelector(".usermessage");
+
+
   const register = () => {
     Axios({
       method: "POST",
@@ -23,8 +26,9 @@ function Login() {
       },
       withCredentials: true,
       url: "http://localhost:3000/api/auth/register",
-    }).then((res) => console.log(res));
-  };
+    }).then((res) => alert("Thank you for signing up. Please log in"));
+  }
+
   const login = () => {
     Axios({
       method: "POST",
