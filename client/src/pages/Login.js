@@ -60,8 +60,8 @@ function Login() {
   };
   return (
     <div className="Login">
-      <div>
         <h4 className="LoginTitle">Welcome!<br/>Please log in or register below</h4>
+      <div className=" animate__animated animate__backInLeft">
         <h3 className="LoginText">Register</h3>
         <input
           className="InputField mb-3"
@@ -77,7 +77,7 @@ function Login() {
         <button className= "btn btn-info ml-3" onClick={register}>Submit</button>
       </div>
 
-      <div>
+      <div className="animate__animated animate__backInRight">
         <h3 className="LoginText">Login</h3>
         <input
           className="InputField"
