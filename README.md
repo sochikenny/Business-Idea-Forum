@@ -1,29 +1,60 @@
-# Create React Express App
+# Business Idea Forum App!!!
 
-## About This Boilerplate
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
-
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
-
-## Starting the app locally
-
-Start by installing front and backend dependencies. While in this directory, run the following command:
+### Developed by
 
 ```
-npm install
+Justin Marchi, Ikenna Nwajagu, and Andrew Kandiew
 ```
 
-This should install node modules within the server and the client folder.
+Visit our app <a href = "https://project3-business-idea-forum.herokuapp.com/" target="_blank"> HERE </a>
 
-After both installations complete, run the following command in your terminal:
 
-```
-npm start
-```
+### Description
 
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+A web application that allows entrepreneurs to record their ideas in a user forum, where other entreprenuers can provide feedback, answer questions, or direct them to resources (including potential investors)
 
-## Deployment (Heroku)
 
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+### Technologies Used
+
+* Node.js
+* MongoDB (Mongoose ORM)
+* React/Redux
+* Custom CSS & Bootstrap
+* Express
+* Authentication Middleware(Passport/bcrypt)
+* Heroku 
+* RESTful API
+* Git
+* Trello
+* Wireframe 
+
+
+### Installation
+
+1. Start by cloning the repository to your local machine
+2. Run "npm install" to install all the dependencies required for the application
+3. Connect to MongoDB and run the app
+
+
+### How to use the Application
+
+1. Register with a username and password then log in
+
+2. On the home page, you have the ability to post a business idea or view a list of other users business ideas 
+
+3. If you choose to view other users business ideas, you can click on their link which will direct you to their post page where you can leave a comment. You also      have the ability to add the post as a favorite for future reference
+
+4. Lastly, you can always log out when done with the application
+
+
+### Directions for Future Development
+
+* Include reply functionality to the comments
+* Develop an events page, which links users to relevant sponsored events (e.g. symposiums, conferences, user groups, etc)
+* Develop a resource page, with direct links to items of importance to entrepreneurs (e.g. funding sources, legal support, marketing tools, career centers, on-line   memberships, etc)
+* Develop a membership page that allows users to establish friends through the app’s network of alumni
+* Integrate a “live chat” feature, in addition to the latent reply
+* Allow users to create ”chat rooms” by key subject to focus questions and conversations (sourcing capital, conducting a market survey, finding development     
+  partners, etc.)
+* Create an anonymized history of topics discussed to rank and recommend relevant issues to the membership
